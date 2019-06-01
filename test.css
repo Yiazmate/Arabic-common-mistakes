@@ -1,0 +1,438 @@
+/** Variables */
+
+:root {
+    /** =================== Table of contents settings ===== */
+    --toc-width:    300px;        
+    --toc-bgcolor:  #0c0d0e;
+    --toc-fgcolor:  #b7b8b9;
+    --header-color:  #b7b8b9;
+    --max-image-width: 600px;
+    --max-text-width: 90%;
+    --linkcolor: #31a354;
+    --bodyBgColor: #0c0d0e; 
+    --small-font-size: 10pt;
+    --table-header-bg-color: #756bb1;
+    --table-bg-color:        #0c0d0e;
+    --table-fg-color:        #b7b8b9;
+  
+}
+
+html {
+    font-size: 100%;
+    color: #b7b8b9;
+    height: 100%;  
+    direction: rtl !important;
+}
+
+body{
+    background-color:  var(--bodyBgColor); 
+}
+#content{
+    
+}
+
+#table-of-contents{        
+   background-color: var(--toc-bgcolor);
+   color: var(--toc-fgcolor);        
+}
+
+#table-of-contents ul {
+    padding-left: 0px;
+    list-style-type:     none;
+    list-style-position: inside;
+}
+
+#table-of-contents li {
+    padding-left: 15px;
+    font-size:    0.9em;
+}
+
+#table-of-contents  a {
+    color:          #b7b8b9; 
+    position:       relative;
+    text-overflow:  ellipsis;
+    border-bottom:  none;
+}
+
+#table-of-contents a:hover {
+    color: #31a354;
+}
+
+#table-of-contents a:active{
+    font-weight: normal;
+    color: #31a354;
+}
+
+#table-of-contents .tag{
+    display: none;
+}
+    
+h1 {
+
+    text-align: right !important;
+    color:       #b7b8b9;
+    font-weight: bold;
+    font-size:   2.7em;
+    border-bottom: 1px solid #756bb1;
+}
+
+ul#tabs, h2, h3, h4, h5 {
+/*    font-family: "Trebuchet MS",Verdana,sans-serif; */
+}
+
+h2, h3, h4, h5, h6 {
+    color:  #b7b8b9;
+    padding-bottom: 3px;
+    margin: 10px 0;
+}
+
+h2 {
+    border-bottom: 1px solid #756bb1;
+    font-size: 31.5px;
+}
+
+h3 {
+    border-bottom: 1px solid #756bb1;
+    font-size: 24.5px;
+}
+
+a {
+    color:              var(--linkcolor);
+    cursor:             pointer;
+    text-decoration:    none;
+    -webkit-transition: none 86ms ease-out;
+    transition:         none 86ms ease-out;
+}
+
+a:hover {
+    border-bottom: none;
+}
+
+.tag {
+    font-family: monospace;
+    font-size: 80%;
+    font-weight: normal;
+    float: right;
+    background: #0c0d0e !important;
+    color: #3182bd;
+}
+
+caption {
+    text-align: left;
+    font-size: 10pt;
+}
+
+.figure p {
+    text-align: left;
+    font-size: 10pt;
+}
+
+
+ul {
+    padding-left: 5px;
+    padding-top:  0px;
+    padding-bottom: 0px;
+    list-style-position: inside;
+}
+
+
+li {
+    padding-left: 5px;
+    padding-top:   4px;
+    font-size:    16px;
+}
+
+.MathJax_MathML {
+    font-size: "140%";
+}
+
+@media only screen and (min-width: 961px) {
+   
+    body {
+        position:  absolute;
+        left:  300px;
+        margin: 0 !important;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+        text-rendering: optimizeLegibility;
+        width:            var(--main-width);
+        padding-left:    20px;
+        padding-right:   50px;
+    }
+  
+    #table-of-contents {
+        top:    0px;
+        left:   0px;
+        width:  var(--toc-width);        
+        height: 100%;
+        overflow-y: scroll;
+        float: left;
+        position: fixed;
+        bottom: 0;
+        display: block;
+        z-index: 9999;
+        display: block;
+        text-align: left;
+   /*     font-family: "Segoe UI", Segoe, Calibri, "Nimbus Sans L", "Ubuntu", Tahoma, Arial, Helvetica, Verdana, sans-serif; */
+        padding: 0 7px;
+    }
+
+    #text-table-of-contents {
+        display: block;
+    }
+
+    img{
+        max-width:  100%;
+        max-height: 500px;
+    }
+
+
+   p {
+   /*    text-align:  justify; */
+       line-height: 1.2;
+       -moz-osx-font-smoothing: grayscale;
+       -webkit-font-smoothing: antialiased !important;
+       -moz-font-smoothing: antialiased !important;
+       text-rendering: optimizelegibility !important;
+       letter-spacing: none;
+       margin: 5px 0;
+   }
+
+   table {
+       font-size: 10pt;
+       border-collapse: collapse;
+       border-spacing:  0;
+       width:           100%;
+       margin-top:      20px;
+       margin-bottom:   20px;
+       background-color: var(--table-bg-color);
+    }
+
+    th {
+        background-color: var(--table-header-bg-color);
+        color:            var(--table-fg-color);
+        font-weight: bold;
+    }
+
+    th.left {
+        text-align: left;
+    }
+
+    td,th {
+        padding: 0;
+    }
+   
+    pre {
+        font-family: "Operator Mono SSm A", "Operator Mono SSm B", 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+        font-size: 12px;
+        background-color:  #0c0d0e;
+        color: #b7b8b9;
+        display: block;
+        padding:2em 28px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        max-height: 500px;
+        overflow-x: auto;
+        box-shadow: none !important;
+        border: 1px solid #756bb1 !important;
+        margin: 0;
+    }
+
+    pre.src{
+        overflow-x: auto;
+        overflow-y: auto;
+    }
+
+   blockquote {
+  /*  font-family: Georgia, serif; */
+    font-style: italic;
+    line-height: 1.2;
+    color: #b7b8b9;
+    background: #0c0d0e;
+    border-left: 6px solid #e31a1c;
+    padding-left: 6px;
+    quotes: none !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+/*   blockquote:before {
+     color:           #ccc;
+     content:         open-quote;
+     font-size:       4em;
+     line-height:     0.1em;
+     margin-right:    0.25em;
+     vertical-align: -0.4em;
+   } */
+
+   blockquote p {
+     display: block;
+   }
+
+code {
+    font-family: monospace;
+    font-size:  10pt;
+    margin: 0px 1px;
+    padding: 0px 2px;
+    overflow-x: scroll;
+}
+
+table {
+    font-size: 10pt;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--table-bg-color);
+    border: 1px solid #756bb1;
+}
+
+td.org-left {
+    text-align: center;
+    padding-top: 5px;
+    border: 1px solid #756bb1;
+    color: #b7b8b9;
+}
+
+th.org-left {
+    text-align: center;
+    border: 1px solid #756bb1 !important;
+}
+
+th {
+    background-color: #756bb1;
+    color: #0c0d0e;
+    font-weight: bold;
+    text-align: justified;
+}
+
+.timestamp {
+    color: #b7b8b9;
+}
+
+th.org-right {
+    text-align: center;
+    border: 1px solid #756bb1;
+}
+
+td.org-right {
+    text-align: center;
+    border: 1px solid #756bb1;
+}
+
+b {
+    color: #d6d7d8;
+}
+
+i {
+    color: #31a354;
+}
+
+.underline {
+    text-decoration: underline;
+    color: #756bb1;
+}
+
+del {
+    color: #e31a1c;
+}
+
+code {
+    background-color: #0c0d0e;
+    color: #3182bd;
+    font-family: monospace;
+    font-size: 10pt;
+    margin: 0px 1px;
+    padding: 0px 2px;
+    overflow-x: scroll;
+}
+
+.org-ul {
+    padding-left: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    list-style-position: inside;
+    margin: 5px;
+}
+
+.org-ol {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    list-style-position: inside;
+    margin: 5px;
+}
+
+pre.src {
+    margin: 5px 0;
+}
+
+
+pre.src::before {
+    display: none;
+    position: absolute;
+    background-color: #0c0d0e;
+    top: -1px;
+    right: 1px;
+    padding: 3px;
+    border: none;
+    color: #31a354;
+}
+
+
+#postamble {
+    border-top: 1px solid #756bb1;
+    padding-top: 10px;
+}
+
+hr {
+    border-top: none !important;
+    border-color: #756bb1;
+        border-top-color: rgb(117, 107, 177);
+}
+
+sup {
+    color: #31a354;
+}
+
+/* ======== Code block Syntax Highlight ======================= */
+
+pre                                      {background-color:#0c0d0e;}
+pre span.org-builtin                     {color:#31a354;font-weight:bold;}
+pre span.org-string                      {color:#3182bd;}
+pre span.org-doc                         {color:#3182bd;}
+pre span.org-keyword                     {color:#0000FF;}
+pre span.org-variable-name               {color:#BA36A5;}
+pre span.org-function-name               {color:#006699;}
+pre span.org-type                        {color:#6434A3;}
+pre span.org-preprocessor                {color:#808080;font-weight:bold;}
+pre span.org-constant                    {color:#D0372D;}
+pre span.org-comment-delimiter           {color:#8D8D84;}
+pre span.org-comment                     {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-1            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-2            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-3            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-4            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-5            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-6            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-7            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-8            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-9            {color:#8D8D84;font-style:italic}
+pre span.org-rainbow-delimiters-depth-1  {color:#707183;}
+pre span.org-rainbow-delimiters-depth-2  {color:#7388d6;}
+pre span.org-rainbow-delimiters-depth-3  {color:#909183;}
+pre span.org-rainbow-delimiters-depth-4  {color:#709870;}
+pre span.org-rainbow-delimiters-depth-5  {color:#907373;}
+pre span.org-rainbow-delimiters-depth-6  {color:#6276ba;}
+pre span.org-rainbow-delimiters-depth-7  {color:#858580;}
+pre span.org-rainbow-delimiters-depth-8  {color:#80a880;}
+pre span.org-rainbow-delimiters-depth-9  {color:#887070;}
+pre span.org-sh-quoted-exec              {color:#FF1493;}
+pre span.org-diff-added                  {color:#008000;}
+pre span.org-diff-changed                {color:#0000FF;}
+pre span.org-diff-header                 {color:#800000;}
+pre span.org-diff-hunk-header            {color:#990099;}
+pre span.org-diff-none                   {color:#545454;}
+pre span.org-diff-removed                {color:#A60000;}
+
