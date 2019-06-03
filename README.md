@@ -9,3 +9,5 @@ To get started, clone the repository:
 > git clone https://github.com/Yiazmate/Arabic-common-mistakes.git
 
 Change the directory and then launch the HTML file with your desired browser. Start learning now!
+
+![An 1080p sample](Sample.png)
